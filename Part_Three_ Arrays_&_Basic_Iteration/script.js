@@ -156,6 +156,7 @@ let cleaned_89 = array_89.filter((val_89) => val_89 && !Number.isNaN(val_89));
 console.log(cleaned_89);
 
 // 90. Group array of objects by property
+// Note: i don't understand this?
 let users_90 = [
   { name: "Raham", role: "frontend" },
   { name: "Ali", role: "backend" },

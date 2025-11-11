@@ -1,153 +1,131 @@
-// // 31
-// function num(sqr) {
-//   console.log(sqr * sqr);
-//   return sqr * sqr;
-// }
+// 31
+function squareNum_31(num_31) {
+  console.log(num_31 * num_31);
+  return num_31 * num_31;
+}
 
-// num(9);
+squareNum_31(9);
 
-// // 32
-// function numbers(num1, num2) {
-//   console.log(num1 + num2);
-//   return num1 + num2;
-// }
+// 32
+function sumNumbers_32(num1_32, num2_32) {
+  console.log(num1_32 + num2_32);
+  return num1_32 + num2_32;
+}
 
-// numbers(23, 83);
+sumNumbers_32(23, 83);
 
 // 33
-// function isEven(num) {
-//   console.log(num % 2 == 0 ? "Even" : "Odd");
-//   return num % 2 == 0 ? "Even" : "Odd";
-// }
+function isEven_33(num_33) {
+  console.log(num_33 % 2 === 0 ? "Even" : "Odd");
+  return num_33 % 2 === 0 ? "Even" : "Odd";
+}
 
-// isEven(3);
+isEven_33(3);
 
 // 34
+function largerNum_34(num1_34, num2_34) {
+  console.log(num1_34 > num2_34 ? `num1 ${num1_34}` : `num2 ${num2_34}`);
+  return num1_34 > num2_34 ? `num1 ${num1_34}` : `num2 ${num2_34}`;
+}
 
-// function nmbers(num1, num2) {
-//   console.log(num1 > num2 ? `num1 ${num1}` : `num2 ${num2}`);
-//   return num1 > num2 ? `num1 ${num1}` : `num2 ${num2}`;
-// }
-
-// nmbers(21, 20);
+largerNum_34(21, 20);
 
 // 35
-// function largest(num1, num2, num3) {
-//   console.log(Math.max(num1, num2, num3));
-// }
+function largest_35(num1_35, num2_35, num3_35) {
+  console.log(Math.max(num1_35, num2_35, num3_35));
+}
 
-// largest(20, 30, 40); // Output: 40
+largest_35(20, 30, 40);
 
 // 36. Write a function that returns a factorial of a number (using a loop).
 
 // 37. Write a function that returns a factorial of a number (using recursion)
 
-//  38. Write a function to check if a number is prime
+// 38. Write a function to check if a number is prime
 
-//  39.
-// function reverseString(str) {
-//   let value = [...str];
-//   value.reverse();
-//   let newStr = "";
-//   for (let items of value) {
-//     newStr += items;
-//   }
-//   console.log(`Reverse of ${str} = ${newStr}`);
-// }
+// 39
+function reverseString_39(str_39) {
+  let value_39 = [...str_39];
+  value_39.reverse();
+  let newStr_39 = "";
+  for (let item_39 of value_39) {
+    newStr_39 += item_39;
+  }
+  console.log(`Reverse of ${str_39} = ${newStr_39}`);
+}
 
-// reverseString("hello world");
+reverseString_39("hello world");
 
-//  40.
-// function palindromeFun(str) {
-//   let string = `${str}`;
-//   let startIndex = string.at(0);
-//   let lastIndex = string.at(-1);
-//   if (startIndex == lastIndex) {
-//     console.log("Palindrome.");
-//   } else {
-//     console.log("Not Palindrome.");
-//   }
-// }
-// palindromeFun("hello");
+// 40
+function palindromeFun_40(str_40) {
+  let string_40 = `${str_40}`;
+  let startIndex_40 = string_40.at(0);
+  let lastIndex_40 = string_40.at(-1);
+  if (startIndex_40 === lastIndex_40) {
+    console.log("Palindrome.");
+  } else {
+    console.log("Not Palindrome.");
+  }
+}
 
-//  41. Write a function that returns the nth Fibonacci number
-// I'm wrong here?
-// function fibonacciNumber(num) {
-//   let array1 = [...num];
-//   array1.reduce((prev, curr) => {
-//     if (prev + 1 == curr) {
-//       console.log("Fibonacci Number.");
-//     } else {
-//       console.log("Not Fibonacci Number.");
-//     }
-//   });
-// }
+palindromeFun_40("hello");
 
-// fibonacciNumber([0, 1, 1, 2, 3, 5, 8, 13, 21]);
-// Fibonacci Number → F(n) = F(n-1) + F(n-2)
+// 41. Write a function that returns the nth Fibonacci number
 
 // 42. Write a function that converts a Celsius value to Fahrenheit
-// function celsiusToFahrenheit(celsius) {
-//   let oneCelsisu = 33.8;
-//   return oneCelsisu;
-// }
 
-//  43. Write a function that converts a Fahrenheit value to Celsius
+// 43. Write a function that converts a Fahrenheit value to Celsius
 
-// 44
-// function v/s arrow function
-// Simple Function: A function which we're creating with function keyword and that function we can't assign in another variable.
-// Arrow Function: A function which we're creating with Arrow keyword(=>) and we can store the arrow function in another variable.
+// 44. Difference between normal function and arrow function
 
-//  45.
-
-// function defaultParameter(arg) {
-//   return arg;
-// }
+// 45
+function defaultParameter_45(arg_45) {
+  return arg_45;
+}
 
 // 46. Write a function that takes a variable number of arguments (using the rest parameter).
 
-// 47.  Demonstrate a function with block scope using let and const .
+// 47. Demonstrate a function with block scope using let and const
 
 // 48. Create a simple counter function using closures
 
-// 49. Write a function that simulates a private variable using closures.
+// 49. Write a function that simulates a private variable using closures
 
-// 50.
-// function delayFunction() {
-//   console.log("Original Function Running...");
+// 50
+function delayFunction_50() {
+  console.log("Original Function Running...");
 
-//   setTimeout(() => {
-//     console.log("Original Function Completed.");
-//     console.log("Second Function Running.");
-//   }, 500);
+  setTimeout(() => {
+    console.log("Original Function Completed.");
+    console.log("Second Function Running.");
+  }, 500);
 
-//   setTimeout(() => {
-//     function secondFun() {
-//       console.log("Second Function completed.");
-//     }
-//     secondFun();
-//   }, 3000);
-// }
+  setTimeout(() => {
+    function secondFun_50() {
+      console.log("Second Function completed.");
+    }
+    secondFun_50();
+  }, 3000);
+}
 
-// delayFunction();
+delayFunction_50();
 
-// 51. Write a function that executes another function at intervals using setInterval .
+// 51. Write a function that executes another function at intervals using setInterval
 
-// 52. Write a function that returns a promise which resolves after a given time.
+// 52. Write a function that returns a promise which resolves after a given time
 
-// 53. Write a function to fetch data from a public API and log the response.
+// 53. Write a function to fetch data from a public API and log the response
 
-// 54.  Write an async function that uses await with the previous fetch call.
+// 54. Write an async function that uses await with the previous fetch call
 
-// 55.  Handle errors in the async function using try...catch
+// 55. Handle errors in the async function using try...catch
 
-// 56.  Write a function that uses .then() and .catch() to handle a promise.
+// 56. Write a function that uses .then() and .catch() to handle a promise
 
-// 57.  Write a function that takes a callback function and executes it.
+// 57. Write a function that takes a callback function and executes it
 
-// 58. Create a function that memoizes the result of an expensive function.
+// 58. Create a function that memoizes the result of an expensive function
 
 // 59. Write a higher-order function that takes a function and a number, and calls the function that many times
 
-// 60. Write a function that composes two other functions ( f(g(x)) ).
+// 60. Write a function that composes two other functions (f(g(x)))
