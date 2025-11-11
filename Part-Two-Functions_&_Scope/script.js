@@ -38,13 +38,13 @@
 
 // largest(20, 30, 40); // Output: 40
 
-// 36. Write a function that returns a factorial of a number (using a loop)
+// 36. Write a function that returns a factorial of a number (using a loop).
 
 // 37. Write a function that returns a factorial of a number (using recursion)
 
 //  38. Write a function to check if a number is prime
 
-//  39. Write a function that reverses a string
+//  39.
 // function reverseString(str) {
 //   let value = [...str];
 //   value.reverse();
@@ -56,6 +56,7 @@
 // }
 
 // reverseString("hello world");
+
 //  40.
 // function palindromeFun(str) {
 //   let string = `${str}`;
@@ -70,7 +71,7 @@
 // palindromeFun("hello");
 
 //  41. Write a function that returns the nth Fibonacci number
-// I was wrong here?
+// I'm wrong here?
 // function fibonacciNumber(num) {
 //   let array1 = [...num];
 //   array1.reduce((prev, curr) => {
@@ -103,3 +104,50 @@
 // function defaultParameter(arg) {
 //   return arg;
 // }
+
+// 46. Write a function that takes a variable number of arguments (using the rest parameter).
+
+// 47.  Demonstrate a function with block scope using let and const .
+
+// 48. Create a simple counter function using closures
+
+// 49. Write a function that simulates a private variable using closures.
+
+// 50.
+// function delayFunction() {
+//   console.log("Original Function Running...");
+
+//   setTimeout(() => {
+//     console.log("Original Function Completed.");
+//     console.log("Second Function Running.");
+//   }, 500);
+
+//   setTimeout(() => {
+//     function secondFun() {
+//       console.log("Second Function completed.");
+//     }
+//     secondFun();
+//   }, 3000);
+// }
+
+// delayFunction();
+
+// 51. Write a function that executes another function at intervals using setInterval .
+
+// 52. Write a function that returns a promise which resolves after a given time.
+
+// 53. Write a function to fetch data from a public API and log the response.
+
+// 54.  Write an async function that uses await with the previous fetch call.
+
+// 55.  Handle errors in the async function using try...catch
+
+// 56.  Write a function that uses .then() and .catch() to handle a promise.
+
+// 57.  Write a function that takes a callback function and executes it.
+
+// 58. Create a function that memoizes the result of an expensive function.
+
+// 59. Write a higher-order function that takes a function and a number, and calls the function that many times
+
+// 60. Write a function that composes two other functions ( f(g(x)) ).
