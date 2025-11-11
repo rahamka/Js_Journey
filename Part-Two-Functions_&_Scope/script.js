@@ -59,14 +59,20 @@
 // }
 // palindromeFun("hello");
 
-// 41
-function fibonacciNumber(num) {
-  let array = [...num];
-  array.reduce((prev, curr) => {
-    if (prev < curr) {
-      console.log("fibonacci Number");
-    }
-  });
-}
+//  41. Write a function that returns the nth Fibonacci number
+// function fibonacciNumber(num) {
+//   let array = [...num];
+//   array.reduce((prev, curr) => {
+//     if (prev < curr) {
+//       console.log("fibonacci Number");
+//     }
+//   });
+// }
 
-fibonacciNumber([1, 2, 3]);
+// fibonacciNumber([1, 2, 3]);
+
+// 42
+function celsiusToFahrenheit(celsius) {
+  let oneCelsisu = 33.8;
+  return oneCelsisu;
+}
