@@ -1,70 +1,70 @@
 // 68. Find index of first element > 10
-let firstIndexOver10_68 = array_67.findIndex((val_68) => val_68 > 10);
-console.log(firstIndexOver10_68);
+// let firstIndexOver10_68 = array_67.findIndex((val_68) => val_68 > 10);
+// console.log(firstIndexOver10_68);
 
-// 69. Check if all elements are even
-array_61.every((val_69) =>
-  val_69 % 2 === 0 ? console.log("Even") : console.log("Not Even")
-);
+// // 69. Check if all elements are even
+// array_61.every((val_69) =>
+//   val_69 % 2 === 0 ? console.log("Even") : console.log("Not Even")
+// );
 
-// 70. Check if any negative number
-array_61.some((val_70) => {
-  if (val_70 < 0) {
-    console.log("Negative");
-  } else {
-    console.log("Positive");
-  }
-});
+// // 70. Check if any negative number
+// array_61.some((val_70) => {
+//   if (val_70 < 0) {
+//     console.log("Negative");
+//   } else {
+//     console.log("Positive");
+//   }
+// });
 
-// 71. Sum using reduce
-let sum_71 = array_61.reduce((prev_71, curr_71) => prev_71 + curr_71);
-console.log(sum_71);
+// // 71. Sum using reduce
+// let sum_71 = array_61.reduce((prev_71, curr_71) => prev_71 + curr_71);
+// console.log(sum_71);
 
-// 72. Sort ascending
-let sortedAsc_72 = [...array_61].sort((a_72, b_72) => a_72 - b_72);
-console.log(sortedAsc_72);
+// // 72. Sort ascending
+// let sortedAsc_72 = [...array_61].sort((a_72, b_72) => a_72 - b_72);
+// console.log(sortedAsc_72);
 
-// 73. Sort array of strings alphabetically
-let arrayStrings_73 = ["banana", "apple", "mango"];
-let sortedStrings_73 = arrayStrings_73.sort();
-console.log(sortedStrings_73);
+// // 73. Sort array of strings alphabetically
+// let arrayStrings_73 = ["banana", "apple", "mango"];
+// let sortedStrings_73 = arrayStrings_73.sort();
+// console.log(sortedStrings_73);
 
-// 74. Sort descending
-let sortedDesc_74 = [...array_61].sort((a_74, b_74) => b_74 - a_74);
-console.log(sortedDesc_74);
+// // 74. Sort descending
+// let sortedDesc_74 = [...array_61].sort((a_74, b_74) => b_74 - a_74);
+// console.log(sortedDesc_74);
 
-// 75. Reverse array
-let reversedArray_75 = [...array_61].reverse();
-console.log(reversedArray_75);
+// // 75. Reverse array
+// let reversedArray_75 = [...array_61].reverse();
+// console.log(reversedArray_75);
 
-// 76. Push element
-let array_76 = [...array_61];
-array_76.push(90);
-console.log(array_76);
+// // 76. Push element
+// let array_76 = [...array_61];
+// array_76.push(90);
+// console.log(array_76);
 
-// 77. Pop element
-let array_77 = [...array_76];
-array_77.pop();
-console.log(array_77);
+// // 77. Pop element
+// let array_77 = [...array_76];
+// array_77.pop();
+// console.log(array_77);
 
-// 78. Unshift element
-let array_78 = [...array_61];
-array_78.unshift(73);
-console.log(array_78);
+// // 78. Unshift element
+// let array_78 = [...array_61];
+// array_78.unshift(73);
+// console.log(array_78);
 
-// 79. Shift element
-let array_79 = [...array_78];
-array_79.shift();
-console.log(array_79);
+// // 79. Shift element
+// let array_79 = [...array_78];
+// array_79.shift();
+// console.log(array_79);
 
-// 80. Index of 20
-let index_80 = array_61.indexOf(20);
-console.log(index_80);
+// // 80. Index of 20
+// let index_80 = array_61.indexOf(20);
+// console.log(index_80);
 
-// 81. Remove first element using splice
-let array_81 = [...array_61];
-array_81.splice(0, 1);
-console.log(array_81);
+// // 81. Remove first element using splice
+// let array_81 = [...array_61];
+// array_81.splice(0, 1);
+// console.log(array_81);
 
 // 82. Insert an element at specific index
 let array_82 = [20, 30, 40, 50];
