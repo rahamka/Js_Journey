@@ -124,3 +124,16 @@ th {
   flex-direction: column;
   align-items: center;
 }
+
+#emailInput2:focus {
+  outline: 2px solid blue;
+}
+
+#emailInput2 {
+  border: none;
+}
+
+#emailInput:focus {
+  outline: 2px solid red;
+  border: none;
+}
