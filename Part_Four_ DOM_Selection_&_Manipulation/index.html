@@ -4,20 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Part-4_DOM_Selection_&_Manipulation</title>
-    <style>
-      * {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
-      }
-      li {
-        list-style-type: none;
-      }
-      a {
-        text-decoration: none;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <br />
+    <input type="checkbox" name="" id="checkbox" />
+    <br />
+    <div id="likesSection">
+      <p id="likesPara">0</p>
+      <button type="button" id="counter">Like Me!</button>
+    </div>
+    <br />
+    <input
+      type="search"
+      name=""
+      id="searchInput"
+      placeholder="Search any thing..." />
+    <br />
+    <button type="button" id="self_disableBtn">Self Disable Btn</button>
+    <ul id="ul_151">
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+    <div id="fireonce">Fire Div</div>
+    <br />
+    <button type="button" id="appearBtn">Appearing Button</button>
+    <div id="popup">This is Popup.</div>
+    <button type="button" id="popupBtn">Show Popup</button><br />
+    <button type="submit" id="toggleBtn_141">OFF</button><br />
+    <form id="">
+      <input
+        type="text"
+        name=""
+        id="username"
+        placeholder="Enter Your Name: " />
+      <input
+        type="password"
+        name=""
+        id="password"
+        placeholder="Enter Password" />
+      <button type="submit" id="button">Submit Data.</button>
+    </form>
+    <br />
+    <form id="myForm">
+      <input type="text" id="myInput2" placeholder="Enter something..." />
+      <button type="submit">Submit</button>
+    </form>
+    <br />
+    <input type="text" id="myInput" placeholder="Type something..." />
+    <br />
+    <div id="progressContainer">
+      <h2>My Learning Progress</h2>
+      <button type="submit" id="progressBtn1">1st Level</button>
+      <button type="submit" id="progressBtn2">2nd Level</button>
+      <button type="submit" id="progressBtn3">3rd Level</button>
+      <br />
+      <br />
+      <div id="progressDiv"></div>
+    </div>
+    <br />
+    <div id="div_134">Div 134.</div>
+    <br />
+    <img src="dev.png" alt="" height="150px" width="150px" id="image_133" />
+    <p id="para_132">Para 132.</p>
+    <button type="button" id="button_131">Click!</button><br /><br />
+    <div id="inputValueGet">
+      <input type="text" name="" id="input_126" placeholder="Enter Value" />
+      <input type="button" value="Get Value" id="button_126" />
+    </div>
+    <div id="htmlContent">
+      <p>This is Paragraph.</p>
+    </div>
     <div id="toggleDiv">Rk Developer.</div>
     <button type="button" id="toggleBtn">Hide</button>
     <div id="specificEl">Specific Element</div>
@@ -31,12 +95,47 @@
     <div id="container2">Container</div>
     <ul id="ul">
       <li>
-        <a href="www.home.com" id="anchor">Home</a>
-        <a href="www.contact.com" id="anchor">Contact</a>
+        <a href="#" id="anchor">Home</a>
+      </li>
+      <li>
+        <a href="#" id="anchor">Contact</a>
       </li>
     </ul>
     <p>Paragraph-1</p>
-    <p>Paragraph-2</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, magnam
+      doloribus error nemo odit fugit libero dolores dolor architecto
+      accusantium alias. Voluptatem veniam debitis iure placeat et fugit,
+      voluptatibus voluptatum! Delectus quas porro non, consequatur, in a atque
+      vitae corporis necessitatibus sed molestiae cum dignissimos rerum veniam
+      id alias! Tempora amet, sint eos quisquam nulla illo recusandae in quos
+      explicabo! Aspernatur sequi, nesciunt eligendi ipsa maiores laudantium
+      porro. Labore corporis a qui explicabo vel animi ipsa ad! At tenetur
+      deserunt, repellat architecto quibusdam nesciunt quo, quisquam magni ullam
+      rem fuga? Suscipit impedit tenetur, iste cupiditate repudiandae accusamus
+      libero amet exercitationem harum quam porro possimus veritatis, sapiente
+      facilis velit placeat! Repellat voluptate sapiente perferendis?
+      Laudantium, nihil. Doloremque quo aperiam consectetur ipsum. Dolores
+      provident soluta itaque quas numquam quidem aperiam. Cum mollitia itaque
+      sit consequatur nobis aut nostrum laborum quae vitae nulla rerum officia
+      possimus delectus porro facere, nesciunt ex tempora facilis. Aspernatur
+      voluptas, eos error rem, sed quam quod id dolorem esse odit iste
+      consectetur corporis facere beatae sit perferendis ducimus a consequatur,
+      fugiat illo natus consequuntur aperiam amet! Asperiores, numquam?
+      Repellendus nam quo optio dolores quae voluptate, pariatur eius aperiam
+      quaerat dolor doloribus voluptatum fuga commodi. Sint, blanditiis suscipit
+      tempore sapiente ex quis asperiores perspiciatis? Soluta delectus quasi ab
+      fugit. Nisi deserunt eius maiores doloremque labore nihil sed a amet
+      repudiandae perferendis totam, provident sapiente? Officiis distinctio
+      dicta beatae reprehenderit molestias eaque. Soluta maiores fugit aut iste,
+      incidunt accusantium corrupti? Quasi recusandae cupiditate deserunt
+      deleniti quo magni eos facere nam repellat vel aliquid esse dolore enim
+      blanditiis ipsum nihil, velit ad veritatis voluptatum ratione eligendi
+      aperiam. Ea similique natus ut? Aliquam maiores aperiam quo nobis.
+      Exercitationem officiis velit autem! Ipsa ipsam tempora sapiente soluta
+      cum nihil obcaecati doloribus, quaerat dolor consequatur autem non esse
+      qui culpa asperiores rem odit cupiditate.
+    </p>
     <h2 id="heading">Part-4_DOM_Selection_&_Manipulation</h2>
     <script src="script.js"></script>
   </body>
