@@ -436,6 +436,33 @@ checkBox.addEventListener("change", () => {
 });
 
 // 156.
+//  Add a change event listener to a dropdown ( select element) that logs the
+//  selected value
+
+// 157.
+// Create a color picker input that changes the background color of the page in real
+// time.
+
+// 158.
+// why it isn't changing the fontSize of the rangePara?
+let rangeInput = document.getElementById("rangeInput");
+let rangePara = document.getElementById("rangePara");
+rangeInput.addEventListener("change", () => {
+  console.log(rangeInput.value);
+  rangePara.style.fontSize = rangeInput.value;
+});
+
+// 159.
+// it can be done html only?
+
+// 160.
+let td = document.querySelectorAll("td");
+td.forEach((val) => {
+  val.addEventListener("dblclick", () => {
+    val.contentEditable = "true";
+  });
+});
+
 // Note: why page reloads if we're not writing the below line?
 //  event.preventDefault(); // 👉 stop page reload
 
