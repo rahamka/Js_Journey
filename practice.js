@@ -7,19 +7,35 @@
 // define only the  array:number[] with two simple examples for me?
 // });
 
+// Examples:
+// 1.
+let nums = [10, 20, 30];
+
+nums.map((value, index, array) => {
+  console.log(array);
+});
+
+// 2.
+let scores = [5, 10, 15];
+
+scores.map((v, i, array) => {
+  console.log(`Current: ${v}, Full array: ${array}`);
+});
+
 // Question 2.
 // Is it correct for finding factorial of 4?
-// let factorialArr = [];
-// for (let i = 1; i <= 4; i++) {
-//   factorialArr.push(i);
-// }
+function factorialFun(val) {
+  let arr = [];
+  for (let i = 1; i <= val; i++) {
+    arr.push(i);
+  }
+  let factorial = arr.reduce((prev, curr) => {
+    return prev * curr;
+  });
+  return factorial;
+}
 
-// const factorial = factorialArr.reduce((prev, curr) => {
-//   return prev * curr;
-// });
-
-// console.log(factorial);
-
+console.log(factorialFun(4));
 // Question 3.
 // why here this code isn't working while paras gives us list of elements?
 // let paras = document.getElementsByClassName("paras");
@@ -31,3 +47,11 @@
 // paras2.forEach((val) => {
 //   console.log(val);
 // });
+
+let items = document.getElementsByClassName("item");
+// items.forEach(...) ❌
+
+Array.from(items).forEach((el) => {
+  // ✔
+  console.log(el);
+});
