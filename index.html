@@ -3,69 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raham Movie Data App</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
   </head>
-
   <body>
-    <!-- Theme Toggle Button -->
-    <button id="themeToggle">🌙</button>
-
-    <aside>
-      <div id="imgDiv">
-        <a href="https://www.3idiotsMovie.com" target="_blank">
-          <p>Click here to watch this movie!</p>
-          <img src="folder.jpg" alt="Movie Poster" width="200" height="200" />
-        </a>
-      </div>
-      <p>This is aside tag.</p>
-    </aside>
-
-    <main>
-      <header>
-        <h2>Raham's Movie Data App</h2>
-      </header>
-
-      <div class="form-wrapper">
-        <label>
-          Enter Movie Name:
-          <input type="text" id="movieNameInput" placeholder="e.g. 3 Idiots" />
-        </label>
-
-        <label>
-          Enter Movie #Roll:
-          <input type="number" id="movieRoll" placeholder="e.g. 206" />
-        </label>
-
-        <label>
-          Description:
-          <textarea
-            id="movieDiscript"
-            rows="3"
-            placeholder="Movie details..."></textarea>
-        </label>
-
-        <button type="button" id="submitBtn">Submit Data</button>
-      </div>
-
-      <table>
-        <caption>
-          Movie Data Table
-        </caption>
-
-        <thead>
-          <tr>
-            <th>#Roll No.</th>
-            <th>Movie Name</th>
-            <th>Description</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-
-        <tbody id="dataAppend"></tbody>
-      </table>
-    </main>
-
-    <script src="script.js"></script>
+    <!-- Why this isn't working will fix it? -->
+    <!-- Use Hamberger icon in the button-->
+    <div class="Nav">
+      <!-- On click it will show ul else hidden. -->
+      <button onclick="menu.hidden^-1">Hamberger Icon🍔</button>
+      <!-- by default hidden. -->
+      <ul id="menu">
+        <li class="list_Items">Home</li>
+        <li class="list_Items">Contact</li>
+        <li class="list_Items">About</li>
+        <li class="list_Items">Reviews</li>
+      </ul>
+    </div>
+    <p id="para_1" class="paras">Paragraph-1</p>
+    <p id="para_2" class="paras">Paragraph-2</p>
+    <script src="practice.js"></script>
   </body>
 </html>
