@@ -10,18 +10,18 @@
     <!-- Use Hamberger icon in the button-->
     <div class="Nav">
       <!-- On click it will show ul else hidden. -->
-      <button onclick="menu.hidden^-1">Hamberger Icon🍔</button>
+      <button onclick="menu.hidden^-1" id="btn">Hamberger Icon🍔</button>
       <!-- by default hidden. -->
       <ul id="menu">
-        Hello
-        <li class="list_Items" id="liElement">Home</li>
+        <li class="list_Items" id="liElement" hidden>Home</li>
         <li class="list_Items2" id="liElement">Contact</li>
-        <li class="list_Items" id="liElement">About</li>
-        <li class="list_Items" id="liElement">Reviews</li>
+        <li class="list_Items2" id="liElement">About</li>
+        <li class="list_Items2" id="liElement">Reviews</li>
       </ul>
     </div>
-    <p id="para_1" class="paras" hidden>Paragraph-1</p>
+    <p id="para_1" class="paras">Paragraph-1</p>
     <p id="para_2" class="paras">Paragraph-2</p>
     <script src="practice.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
