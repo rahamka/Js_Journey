@@ -1,21 +1,33 @@
-// let ul = document.querySelector("#menu");
-// console.log(ul.textContent);
-// text Node
-// my understanding for this.
-// actually text is automatically created by the browser for align the elements in the body.
+// // New Things.
+// window.location.href;
+// window.history.back();
+// console.log(window.navigator.userAgent);
 
-let para1 = document.getElementById("para_1");
-let newPara = document.createElement("p");
-newPara.textContent = "ali";
-document.getElementById("para_1").replaceWith(newPara);
+// Type Coercion
+// Control Flow => if, else, if-else , else-if
+// Problem. 1
+let data = 7;
+while (data >= 0) {
+  if (data <= 5) {
+    data--;
+    continue;
+  }
+  console.log(data);
+  data--;
+}
 
-// replaceChild single element
-let ul = document.getElementById("menu");
-let explore = document.createElement("li");
-explore.textContent = "Explore";
-ul.childNodes[0].replaceWith(explore);
+// Problem 2.
+let i = 5;
+while (true) {
+  console.log(i);
+  i += 5;
+  if (i > 30) {
+    break;
+  }
+}
 
-// replaceChildren all elements
-let newChild = document.createElement("li");
-newChild.textContent = "New Child";
-ul.replaceChildren(newChild);
+// Problem 3.
+for (let i = 0; i < 3; i++) {
+  if (i === 1) break;
+  console.log(i);
+}
