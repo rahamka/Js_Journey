@@ -6,34 +6,16 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- Why this isn't working? We'll fix it. -->
-    <!-- Use Hamburger icon in the button -->
-    <div class="Nav">
-      <!-- On click it will toggle UL -->
-      <button id="btn">☰</button>
+    <!-- Question - 1 -->
 
-      <!-- Menu hidden by default -->
-      <ul id="menu" hidden>
-        <li class="list_Item">Home</li>
-        <li class="list_Item">Contact</li>
-        <li class="list_Item">About</li>
-        <li class="list_Item">Reviews</li>
-      </ul>
-    </div>
+    <h2 id="h2">Hello JavaScript</h2>
 
-    <p id="para_1" class="paras">Paragraph-1</p>
-    <p id="para_2" class="paras">Paragraph-2</p>
-
-    <script>
-      // Fixing your wrong onclick
-      const btn = document.getElementById("btn");
-      const menu = document.getElementById("menu");
-
-      btn.addEventListener("click", () => {
-        menu.hidden = !menu.hidden; // toggles visibility
-      });
-    </script>
-
+    <!-- Question - 2 -->
+    <div class="box" id="box-1"></div>
+    <br />
+    <div class="box" id="box-2"></div>
+    <br />
+    <div class="box" id="box-3"></div>
     <script src="practice.js"></script>
     <script src="script.js"></script>
   </body>

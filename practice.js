@@ -1,33 +1,12 @@
-// // New Things.
-// window.location.href;
-// window.history.back();
-// console.log(window.navigator.userAgent);
+// Question - 1
+let h2 = document.getElementById("h2");
+h2.innerText += " from Apna college students!";
+// Question - 2
+let div1 = document.getElementById("box-1");
+div1.innerText = "Box1";
 
-// Type Coercion
-// Control Flow => if, else, if-else , else-if
-// Problem. 1
-let data = 7;
-while (data >= 0) {
-  if (data <= 5) {
-    data--;
-    continue;
-  }
-  console.log(data);
-  data--;
-}
+let div2 = document.getElementById("box-2");
+div2.innerText = "Box2";
 
-// Problem 2.
-let i = 5;
-while (true) {
-  console.log(i);
-  i += 5;
-  if (i > 30) {
-    break;
-  }
-}
-
-// Problem 3.
-for (let i = 0; i < 3; i++) {
-  if (i === 1) break;
-  console.log(i);
-}
+let div3 = document.getElementById("box-3");
+div3.innerText = "Box3";
