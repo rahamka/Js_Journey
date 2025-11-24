@@ -1,18 +1,24 @@
-// task 1
 let textArea = document.getElementById("textarea");
-let counter = 0;
 let counterPara = document.getElementById("counterPara");
-textArea.addEventListener("keydown", (evt) => {
-  counter += 1;
-  if (textArea.value.length > 45) {
+const MAX_CHARS = 50;
+
+textArea.addEventListener("input", () => {
+  let currentLength = textArea.value.length;
+
+  // Update counter
+  counterPara.innerText = `${currentLength} / ${MAX_CHARS} characters`;
+
+  // Change outline color based on length
+  if (currentLength >= 45) {
     textArea.style.outlineColor = "red";
-  }
-  if (textArea.value.length < 45) {
+  } else if (currentLength >= 40) {
+    textArea.style.outlineColor = "orange";
+  } else {
     textArea.style.outlineColor = "black";
   }
-  if (evt.key == "Backspace") {
-    counter -= 2;
-    console.log(counter);
+
+  // Optional: prevent typing beyond max limit
+  if (currentLength > MAX_CHARS) {
+    textArea.value = textArea.value.slice(0, MAX_CHARS);
   }
-  counterPara.innerText = counter;
 });
