@@ -1,14 +1,7 @@
 // target , clientX & clientY
 let btn = document.getElementById("btn");
+let value = 34;
 
-// how to remove the addEventListener ?
-let handler1 = (evt) => {
-  console.log("handler - 1", evt);
-};
-let value1 = btn.addEventListener("click", handler1);
-
-btn.addEventListener("click", (evt) => {
-  console.log("handler - 2", evt);
+btn.addEventListener("click", () => {
+  console.log(!Number.isNaN(value));
 });
-
-btn.removeEventListener("click", handler1);
