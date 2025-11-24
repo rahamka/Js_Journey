@@ -1,28 +1,8 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.para {
-  color: white;
-  background-color: blue;
-  display: inline-flex;
-  padding: 8px;
-  border-radius: 9px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 600;
-}
-
-.newClass {
-  /* color: yellow; */
-  background-color: blue;
-  display: inline-block;
-  padding: 10px;
-  margin: 10px 0px 10px 5px;
-  border-radius: 10px;
-  font-weight: 600;
-  /* word-spacing: 5px; */
-  font-size: 1.2rem;
+button {
+  display: block;
 }
