@@ -12,10 +12,12 @@ textArea.addEventListener("input", () => {
   // Change outline color based on length
   if (currentLength >= 45) {
     textArea.style.outlineColor = "red";
+    textArea.disabled = true; // stop typing
   } else if (currentLength >= 40) {
     textArea.style.outlineColor = "orange";
   } else {
     textArea.style.outlineColor = "black";
+    textArea.disabled = false;
   }
 
   // Optional: prevent typing beyond max limit
