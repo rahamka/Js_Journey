@@ -27,6 +27,17 @@ mousePara.addEventListener("mousemove", (evt) => {
 // task 3
 let inputField = document.getElementById("input");
 inputField.addEventListener("keydown", (evt) => {
+  if (inputField.value.length >= 11) {
+    let arr = [];
+    arr.push(inputField.value);
+    for (let i = 1; i <= 11; i++) {
+      inputField.value = arr[i];
+    }
+
+    inputField.style.outlineColor = "red";
+  } else if (inputField.value.length <= 11) {
+    inputField.style.outlineColor = "black";
+  }
   if (evt.key == "Enter") {
     inputField.value = `Entered total ${inputField.value.length} chars.`;
   }
@@ -44,7 +55,8 @@ img.addEventListener("dblclick", () => {
 });
 
 // task 5.
-let submitBtn = document.getElementById("form");
+let form = document.getElementById("submitForm");
+
 form.addEventListener("submit", function (evt) {
   evt.preventDefault();
 
