@@ -1,3 +1,4 @@
+// task 1
 let textArea = document.getElementById("textarea");
 let counterPara = document.getElementById("counterPara");
 const MAX_CHARS = 50;
@@ -21,4 +22,12 @@ textArea.addEventListener("input", () => {
   if (currentLength > MAX_CHARS) {
     textArea.value = textArea.value.slice(0, MAX_CHARS);
   }
+});
+
+// task 2
+let myImg = document.getElementById("myImg");
+let once = false;
+myImg.addEventListener("dblclick", () => {
+  once = !once;
+  myImg.style.transform = once ? "scale(1.5)" : "";
 });
