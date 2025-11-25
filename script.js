@@ -14,9 +14,15 @@ rockImg.addEventListener("click", () => {
   if (randomNum <= rockValue) {
     MyresultCounter += 1;
     myCounter.innerText = MyresultCounter;
+    resultDiplayBtn.style.backgroundColor = "green";
+    resultDiplayBtn.style.color = "white";
+    resultDiplayBtn.innerText = "You Won.";
   } else if (randomNum > rockValue) {
     compResultCounter += 1;
     compCounter.innerText = compResultCounter;
+    resultDiplayBtn.style.backgroundColor = "red";
+    resultDiplayBtn.style.color = "white";
+    resultDiplayBtn.innerText = "You Lost.";
   }
 });
 
@@ -26,9 +32,15 @@ paperImg.addEventListener("click", () => {
   if (randomNum <= paperValue && randomNum > rockImg) {
     MyresultCounter += 1;
     myCounter.innerText = MyresultCounter;
+    resultDiplayBtn.style.backgroundColor = "green";
+    resultDiplayBtn.style.color = "white";
+    resultDiplayBtn.innerText = "You Won.";
   } else if (randomNum > paperValue) {
     compResultCounter += 1;
     compCounter.innerText = compResultCounter;
+    resultDiplayBtn.style.backgroundColor = "red";
+    resultDiplayBtn.style.color = "white";
+    resultDiplayBtn.innerText = "You Lost.";
   }
 });
 
@@ -38,8 +50,14 @@ scissorImg.addEventListener("click", () => {
   if (randomNum <= scissorValue && randomNum > paperValue) {
     MyresultCounter += 1;
     myCounter.innerText = MyresultCounter;
+    resultDiplayBtn.style.backgroundColor = "green";
+    resultDiplayBtn.style.color = "white";
+    resultDiplayBtn.innerText = "You Won.";
   } else if (randomNum < scissorValue) {
     compResultCounter += 1;
     compCounter.innerText = compResultCounter;
+    resultDiplayBtn.style.backgroundColor = "red";
+    resultDiplayBtn.style.color = "white";
+    resultDiplayBtn.innerText = "You Lost.";
   }
 });
