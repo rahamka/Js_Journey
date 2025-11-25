@@ -29,7 +29,7 @@ img {
 }
 
 img:hover {
-  border: 4px solid #000015;
+  outline: 4px solid #000015;
 }
 
 #resultsDiv {
