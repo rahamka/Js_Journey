@@ -16,13 +16,25 @@ rockImg.addEventListener("click", () => {
     myCounter.innerText = MyresultCounter;
     resultDiplayBtn.style.backgroundColor = "green";
     resultDiplayBtn.style.color = "white";
-    resultDiplayBtn.innerText = "You Won.";
+    resultDiplayBtn.innerText = "You Won Computer Beats.";
   } else if (randomNum > rockValue) {
     compResultCounter += 1;
     compCounter.innerText = compResultCounter;
     resultDiplayBtn.style.backgroundColor = "red";
     resultDiplayBtn.style.color = "white";
     resultDiplayBtn.innerText = "You Lost.";
+  }
+  if (randomNum > rockValue && randomNum < paperValue) {
+    resultDiplayBtn.style.backgroundColor = "red";
+    resultDiplayBtn.style.color = "white";
+    resultDiplayBtn.innerText = "You Lost Computer Select Paper.";
+    resultDiplayBtn.style.margin = "0px 10px 0px 10px ";
+  }
+  if (randomNum > paperValue && randomNum < scissorValue) {
+    resultDiplayBtn.style.backgroundColor = "red";
+    resultDiplayBtn.style.color = "white";
+    resultDiplayBtn.innerText = "You Lost Computer Select Scissor.";
+    resultDiplayBtn.style.margin = "0px 15px 0px 15px ";
   }
 });
 
@@ -34,13 +46,27 @@ paperImg.addEventListener("click", () => {
     myCounter.innerText = MyresultCounter;
     resultDiplayBtn.style.backgroundColor = "green";
     resultDiplayBtn.style.color = "white";
-    resultDiplayBtn.innerText = "You Won.";
+    resultDiplayBtn.innerText = "You Won Computer Beats.";
   } else if (randomNum > paperValue) {
     compResultCounter += 1;
     compCounter.innerText = compResultCounter;
     resultDiplayBtn.style.backgroundColor = "red";
     resultDiplayBtn.style.color = "white";
     resultDiplayBtn.innerText = "You Lost.";
+  }
+  if (randomNum <= rockValue) {
+    resultDiplayBtn.style.backgroundColor = "red";
+    resultDiplayBtn.style.color = "white";
+    resultDiplayBtn.innerText = "You Lost Computer Select Rock.";
+  }
+  if (
+    randomNum > rockValue &&
+    randomNum <= scissorValue &&
+    randomNum > paperValue
+  ) {
+    resultDiplayBtn.style.backgroundColor = "red";
+    resultDiplayBtn.style.color = "white";
+    resultDiplayBtn.innerText = "You Lost Computer Select Scissor.";
   }
 });
 
@@ -52,12 +78,22 @@ scissorImg.addEventListener("click", () => {
     myCounter.innerText = MyresultCounter;
     resultDiplayBtn.style.backgroundColor = "green";
     resultDiplayBtn.style.color = "white";
-    resultDiplayBtn.innerText = "You Won.";
+    resultDiplayBtn.innerText = "You Won Computer Beats.";
   } else if (randomNum < scissorValue) {
     compResultCounter += 1;
     compCounter.innerText = compResultCounter;
     resultDiplayBtn.style.backgroundColor = "red";
     resultDiplayBtn.style.color = "white";
     resultDiplayBtn.innerText = "You Lost.";
+  }
+  if (randomNum <= rockValue) {
+    resultDiplayBtn.style.backgroundColor = "red";
+    resultDiplayBtn.style.color = "white";
+    resultDiplayBtn.innerText = "You Lost Computer Select Rock.";
+  }
+  if (randomNum <= paperValue && randomNum > rockValue) {
+    resultDiplayBtn.style.backgroundColor = "red";
+    resultDiplayBtn.style.color = "white";
+    resultDiplayBtn.innerText = "You Lost Computer Select Paper.";
   }
 });
