@@ -44,7 +44,6 @@ img:hover {
 
 p {
   font-size: 1.2rem;
-  text-indent: 8px;
 }
 
 #ComputerPara {
@@ -63,4 +62,12 @@ button {
   justify-content: center;
   align-items: center;
   margin-top: 100px;
+}
+
+#myCounterPara {
+  text-indent: 10px;
+}
+
+#compCounter {
+  text-indent: 30px;
 }
