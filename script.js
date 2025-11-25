@@ -1,25 +1,17 @@
-let textArea = document.getElementById("textarea");
-let counterPara = document.getElementById("counterPara");
-const MAX_CHARS = 50;
+let btn = document.getElementById("btn");
+btn.addEventListener("click", () => {
+  console.log("handler - 1");
+});
 
-textArea.addEventListener("input", () => {
-  let currentLength = textArea.value.length;
+let handler2 = (evt) => {
+  console.log("handler - 2");
+  console.log(evt);
+};
+btn.addEventListener("click", handler2);
 
-  // Prevent typing beyond MAX_CHARS
-  if (currentLength > MAX_CHARS) {
-    textArea.value = textArea.value.slice(0, MAX_CHARS);
-    currentLength = MAX_CHARS;
-  }
+// removing the eventListener.
+btn.removeEventListener("click", handler2);
 
-  // Update counter
-  counterPara.innerText = `${currentLength} / ${MAX_CHARS} characters`;
-
-  // Change outline color based on length
-  if (currentLength >= 45) {
-    textArea.style.outlineColor = "red"; // danger
-  } else if (currentLength >= 40) {
-    textArea.style.outlineColor = "orange"; // warning
-  } else {
-    textArea.style.outlineColor = "black"; // normal
-  }
+btn.addEventListener("click", () => {
+  console.log("handler - 3");
 });
