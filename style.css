@@ -2,72 +2,85 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #222;
 }
 
 header {
-  height: 70px;
-  width: auto;
-  background-color: #000015;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
+  background: #1a1a2e;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-#imagesDiv {
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
 }
 
-img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%; /* optional */
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.choices img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  padding: 10px;
+  background: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
 }
 
-img:hover {
-  outline: 4px solid #000015;
+.choices img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-#resultsDiv {
+.scoreboard {
   display: flex;
   justify-content: center;
-  align-content: center;
-  column-gap: 70px;
+  gap: 80px;
+  margin-top: 40px;
 }
 
-p {
+.score {
+  text-align: center;
+}
+
+.score .value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a1a2e;
+}
+
+#statusBtn {
+  margin: 70px auto;
+  display: block;
+  width: 320px;
+  padding: 15px 0;
   font-size: 1.2rem;
-}
-
-#ComputerPara {
-  text-indent: 30px;
-}
-
-button {
-  height: 50px;
-  width: 300px;
+  border: none;
   border-radius: 12px;
-  font-size: 1.2rem;
+  background: #1a1a2e;
+  color: #fff;
+  transition: 0.2s;
 }
 
-#buttonDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
+#statusBtn:hover {
+  transform: scale(1.05);
 }
 
-#myCounterPara {
-  text-indent: 10px;
-}
-
-#compCounter {
-  text-indent: 30px;
+#rock,
+#paper,
+#scissors {
+  object-fit: cover;
 }

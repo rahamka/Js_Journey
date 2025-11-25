@@ -1,99 +1,42 @@
-let rockImg = document.getElementById("img-1");
-let paperImg = document.getElementById("img-2");
-let scissorImg = document.getElementById("img-3");
-let myCounter = document.getElementById("myCounterPara");
-let compCounter = document.getElementById("compCounter");
-let resultDiplayBtn = document.getElementById("resultBtn");
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
+const myScore = document.getElementById("myScore");
+const computerScore = document.getElementById("computerScore");
+const statusBtn = document.getElementById("statusBtn");
 
-let randomNum;
-let rockValue = 0.3;
-let MyresultCounter = 0;
-let compResultCounter = 0;
-rockImg.addEventListener("click", () => {
-  randomNum = Number(Math.random());
-  if (randomNum <= rockValue) {
-    MyresultCounter += 1;
-    myCounter.innerText = MyresultCounter;
-    resultDiplayBtn.style.backgroundColor = "green";
-    resultDiplayBtn.style.color = "white";
-    resultDiplayBtn.innerText = "You Won Computer Beats.";
-  } else if (randomNum > rockValue) {
-    compResultCounter += 1;
-    compCounter.innerText = compResultCounter;
-    resultDiplayBtn.style.backgroundColor = "red";
-    resultDiplayBtn.style.color = "white";
-    resultDiplayBtn.innerText = "You Lost.";
-  }
-  if (randomNum > rockValue && randomNum < paperValue) {
-    resultDiplayBtn.style.backgroundColor = "red";
-    resultDiplayBtn.style.color = "white";
-    resultDiplayBtn.innerText = "You Lost Computer Select Paper.";
-    resultDiplayBtn.style.margin = "0px 10px 0px 10px ";
-  }
-  if (randomNum > paperValue && randomNum < scissorValue) {
-    resultDiplayBtn.style.backgroundColor = "red";
-    resultDiplayBtn.style.color = "white";
-    resultDiplayBtn.innerText = "You Lost Computer Select Scissor.";
-    resultDiplayBtn.style.margin = "0px 15px 0px 15px ";
-  }
-});
+let myPoints = 0;
+let compPoints = 0;
 
-let paperValue = 0.6;
-paperImg.addEventListener("click", () => {
-  randomNum = Math.random();
-  if (randomNum <= paperValue && randomNum > rockImg) {
-    MyresultCounter += 1;
-    myCounter.innerText = MyresultCounter;
-    resultDiplayBtn.style.backgroundColor = "green";
-    resultDiplayBtn.style.color = "white";
-    resultDiplayBtn.innerText = "You Won Computer Beats.";
-  } else if (randomNum > paperValue) {
-    compResultCounter += 1;
-    compCounter.innerText = compResultCounter;
-    resultDiplayBtn.style.backgroundColor = "red";
-    resultDiplayBtn.style.color = "white";
-    resultDiplayBtn.innerText = "You Lost.";
-  }
-  if (randomNum <= rockValue) {
-    resultDiplayBtn.style.backgroundColor = "red";
-    resultDiplayBtn.style.color = "white";
-    resultDiplayBtn.innerText = "You Lost Computer Select Rock.";
-  }
-  if (
-    randomNum > rockValue &&
-    randomNum <= scissorValue &&
-    randomNum > paperValue
-  ) {
-    resultDiplayBtn.style.backgroundColor = "red";
-    resultDiplayBtn.style.color = "white";
-    resultDiplayBtn.innerText = "You Lost Computer Select Scissor.";
-  }
-});
+const choices = ["rock", "paper", "scissors"];
 
-let scissorValue = 0.9;
-scissorImg.addEventListener("click", () => {
-  randomNum = Math.random();
-  if (randomNum <= scissorValue && randomNum > paperValue) {
-    MyresultCounter += 1;
-    myCounter.innerText = MyresultCounter;
-    resultDiplayBtn.style.backgroundColor = "green";
-    resultDiplayBtn.style.color = "white";
-    resultDiplayBtn.innerText = "You Won Computer Beats.";
-  } else if (randomNum < scissorValue) {
-    compResultCounter += 1;
-    compCounter.innerText = compResultCounter;
-    resultDiplayBtn.style.backgroundColor = "red";
-    resultDiplayBtn.style.color = "white";
-    resultDiplayBtn.innerText = "You Lost.";
+function play(userChoice) {
+  const computerChoice = choices[Math.floor(Math.random() * 3)];
+
+  if (userChoice === computerChoice) {
+    statusBtn.textContent = "Draw! Both picked " + userChoice;
+    statusBtn.style.background = "#6c757d";
+    return;
   }
-  if (randomNum <= rockValue) {
-    resultDiplayBtn.style.backgroundColor = "red";
-    resultDiplayBtn.style.color = "white";
-    resultDiplayBtn.innerText = "You Lost Computer Select Rock.";
+
+  const win =
+    (userChoice === "rock" && computerChoice === "scissors") ||
+    (userChoice === "paper" && computerChoice === "rock") ||
+    (userChoice === "scissors" && computerChoice === "paper");
+
+  if (win) {
+    myPoints++;
+    myScore.textContent = myPoints;
+    statusBtn.textContent = `You Win! Computer chose ${computerChoice}`;
+    statusBtn.style.background = "#2ecc71";
+  } else {
+    compPoints++;
+    computerScore.textContent = compPoints;
+    statusBtn.textContent = `You Lost! Computer chose ${computerChoice}`;
+    statusBtn.style.background = "#e74c3c";
   }
-  if (randomNum <= paperValue && randomNum > rockValue) {
-    resultDiplayBtn.style.backgroundColor = "red";
-    resultDiplayBtn.style.color = "white";
-    resultDiplayBtn.innerText = "You Lost Computer Select Paper.";
-  }
-});
+}
+
+rock.addEventListener("click", () => play("rock"));
+paper.addEventListener("click", () => play("paper"));
+scissors.addEventListener("click", () => play("scissors"));
