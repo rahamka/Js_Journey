@@ -53,10 +53,9 @@ p {
 
 button {
   height: 50px;
-  width: 200px;
+  width: 300px;
   border-radius: 12px;
   font-size: 1.2rem;
-  cursor: pointer;
 }
 
 #buttonDiv {

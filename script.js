@@ -1,32 +1,45 @@
-let img_1 = document.getElementById("img-1");
-let img_2 = document.getElementById("img-2");
-let img_3 = document.getElementById("img-3");
-let resultBtn = document.getElementById("resultBtn");
+let rockImg = document.getElementById("img-1");
+let paperImg = document.getElementById("img-2");
+let scissorImg = document.getElementById("img-3");
+let myCounter = document.getElementById("myCounterPara");
+let compCounter = document.getElementById("compCounter");
+let resultDiplayBtn = document.getElementById("resultBtn");
 
-let comp_Counter = 0;
-let my_Counter = 0;
-let randomNum = "";
-img_1.addEventListener("click", () => {
-  let img_1Value = 0.3;
-  randomNum = Math.random();
-  if (randomNum > img_1Value) {
-    resultBtn.innerText = "You Lost";
-    resultBtn.style.backgroundColor = "red";
-    resultBtn.style.color = "white";
-  } else if (randomNum <= img_1Value) {
-    resultBtn.innerText = "You Win, Computer Beats";
-    resultBtn.style.backgroundColor = "green";
-    resultBtn.style.width = "auto";
-    resultBtn.style.color = "white";
+let randomNum;
+let rockValue = 0.3;
+let MyresultCounter = 0;
+let compResultCounter = 0;
+rockImg.addEventListener("click", () => {
+  randomNum = Number(Math.random());
+  if (randomNum <= rockValue) {
+    MyresultCounter += 1;
+    myCounter.innerText = MyresultCounter;
+  } else if (randomNum > rockValue) {
+    compResultCounter += 1;
+    compCounter.innerText = compResultCounter;
   }
 });
 
-img_2.addEventListener("click", () => {
+let paperValue = 0.6;
+paperImg.addEventListener("click", () => {
   randomNum = Math.random();
-  console.log(randomNum);
+  if (randomNum <= paperValue && randomNum > rockImg) {
+    MyresultCounter += 1;
+    myCounter.innerText = MyresultCounter;
+  } else if (randomNum > paperValue) {
+    compResultCounter += 1;
+    compCounter.innerText = compResultCounter;
+  }
 });
 
-img_3.addEventListener("click", () => {
+let scissorValue = 0.9;
+scissorImg.addEventListener("click", () => {
   randomNum = Math.random();
-  console.log(randomNum);
+  if (randomNum <= scissorValue && randomNum > paperValue) {
+    MyresultCounter += 1;
+    myCounter.innerText = MyresultCounter;
+  } else if (randomNum < scissorValue) {
+    compResultCounter += 1;
+    compCounter.innerText = compResultCounter;
+  }
 });
