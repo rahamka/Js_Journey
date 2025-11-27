@@ -59,6 +59,3 @@ choices.forEach((choice) => {
     playGame(userChoice);
   });
 });
-
-// I was write the code of Rock, Paper & Scissors Game only 20% correct ?
-// so now you can check this code and on the basis of this code you can give me out 10 rank?
