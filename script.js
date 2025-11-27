@@ -1,42 +1,64 @@
-const rock = document.getElementById("rock");
-const paper = document.getElementById("paper");
-const scissors = document.getElementById("scissors");
-const myScore = document.getElementById("myScore");
-const computerScore = document.getElementById("computerScore");
-const statusBtn = document.getElementById("statusBtn");
+let userScore = 0;
+let compScore = 0;
 
-let myPoints = 0;
-let compPoints = 0;
+const choices = document.querySelectorAll(".choice");
+const msg = document.querySelector("#msg");
 
-const choices = ["rock", "paper", "scissors"];
+const userScorePara = document.getElementById("user-score");
+const compScorePara = document.getElementById("comp-score");
 
-function play(userChoice) {
-  const computerChoice = choices[Math.floor(Math.random() * 3)];
+const genCompChoice = () => {
+  const options = ["rock", "paper", "scissors"];
+  const randIdx = Math.floor(Math.random() * 3);
+  return options[randIdx];
+  // rock, paper & scissors
+};
 
-  if (userChoice === computerChoice) {
-    statusBtn.textContent = "Draw! Both picked " + userChoice;
-    statusBtn.style.background = "#6c757d";
-    return;
-  }
+const drawGame = () => {
+  msg.textContent = "game was draw.";
+  msg.style.backgroundColor = "#081b31";
+};
 
-  const win =
-    (userChoice === "rock" && computerChoice === "scissors") ||
-    (userChoice === "paper" && computerChoice === "rock") ||
-    (userChoice === "scissors" && computerChoice === "paper");
-
-  if (win) {
-    myPoints++;
-    myScore.textContent = myPoints;
-    statusBtn.textContent = `You Win! Computer chose ${computerChoice}`;
-    statusBtn.style.background = "#2ecc71";
+const showWinner = (userWin, userChoice, compChoice) => {
+  if (userWin) {
+    userScore++;
+    userScorePara.innerText = userScore;
+    msg.textContent = `you win! Your ${userChoice} beats ${compChoice}`;
+    msg.style.backgroundColor = "green";
   } else {
-    compPoints++;
-    computerScore.textContent = compPoints;
-    statusBtn.textContent = `You Lost! Computer chose ${computerChoice}`;
-    statusBtn.style.background = "#e74c3c";
+    compScore++;
+    compScorePara.innerText = compScore;
+    msg.textContent = `you lost. ${compChoice} beats Your ${userChoice}`;
+    msg.style.backgroundColor = "red";
   }
-}
+};
 
-rock.addEventListener("click", () => play("rock"));
-paper.addEventListener("click", () => play("paper"));
-scissors.addEventListener("click", () => play("scissors"));
+const playGame = (userChoice) => {
+  const compChoice = genCompChoice();
+
+  if (userChoice === compChoice) {
+    drawGame();
+  } else {
+    let userWin = true;
+    if (userChoice === "rock") {
+      // scissors, paper
+      userWin = compChoice === "paper" ? false : true;
+    } else if (userChoice === "paper") {
+      userWin = compChoice === "scissors" ? false : true;
+    } else {
+      // rock, paper
+      userWin = compChoice === "rock" ? false : true;
+    }
+    showWinner(userWin, userChoice, compChoice);
+  }
+};
+
+choices.forEach((choice) => {
+  choice.addEventListener("click", () => {
+    const userChoice = choice.getAttribute("id");
+    playGame(userChoice);
+  });
+});
+
+// I was write the code of Rock, Paper & Scissors Game only 20% correct ?
+// so now you can check this code and on the basis of this code you can give me out 10 rank?
