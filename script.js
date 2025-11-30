@@ -70,7 +70,3 @@ choices.forEach((choice) => {
 });
 
 scoreUpdate();
-
-// 08: 03: 00 starting time of lacture of this game
-// ok create this project using your own logic?
-// use localStorage to save scores of user and computer.
